@@ -1,8 +1,8 @@
 # This file is used for convenience of local development.
 # DO NOT STORE YOUR CREDENTIALS INTO GIT
 export POSTGRES_USERNAME=postgres
-export POSTGRES_PASSWORD=123456
-export POSTGRES_HOST=localhost
+export POSTGRES_PASSWORD=Socnho2020
+export POSTGRES_HOST=dailb-proj3.cb1g7idzrxmp.us-east-1.rds.amazonaws.com
 export POSTGRES_DB=postgres
 export AWS_BUCKET=arn:aws:s3:::dailb-proj3
 export AWS_REGION=us-east-1
