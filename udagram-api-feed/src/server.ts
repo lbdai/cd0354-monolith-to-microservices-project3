@@ -13,11 +13,10 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
   await sequelize.addModels(V0_FEED_MODELS);
 
   console.debug("Initialize database connection...");
-  console.debug(process.env.PORT);
   await sequelize.sync();
 
   const app = express();
-  const port = 8080;
+  const port = process.env.PORT || 8080;
 
   app.use(bodyParser.json());
 
@@ -26,7 +25,7 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
   // something that will be covered in the next course.
   app.use(cors({
     allowedHeaders: [
-      'Origin', 'X-Requested-With',
+      'Origin', '*',
       'Content-Type', 'Accept',
       'X-Access-Token', 'Authorization',
     ],
